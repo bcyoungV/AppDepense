@@ -15,53 +15,74 @@
 </head>
  <body>
   <ion-app class="md ion-page hydrated">
+
    <ion-header role="banner" class="md header-collapse-none hydrated">
+
     <ion-toolbar color="primary">
      <ion-title class="ion-text-center">Gestionnaire de budget</ion-title>
     </ion-toolbar>
 
-
    </ion-header>
+
    <ion-content>
+     <ion-grid>
+       <ion-row>
+        <ion-col size-md="6" offset-md="3">
     <ion-card>
      <ion-card-header>
        <ion-card-title><b>Nouvelle dépense</b></ion-card-title>
      </ion-card-header>
      <ion-card-content>
         <ion-item slot="start">
-         <ion-label position="floating" color="none" mode="md" class="ion-margin-vertical">
-          Intitulé de la Dépense
-         </ion-label>
-         <ion-input type="text"></ion-input>
+         <ion-label position="floating" color="none" mode="md" class="ion-margin-vertical">Intitulé de la Dépense</ion-label>
+         <ion-input id="intitule" type="text"></ion-input>
         </ion-item>
 
         <ion-item slot="start">
-         <ion-label position="floating" color="none" mode="md">
-          Somme Depensée
+         <ion-label position="floating" color="none" mode="md">Somme de la depense
          </ion-label>
-         <ion-input type="number"></ion-input>
+         <ion-input id="somme" type="number"></ion-input>
         </ion-item>
 
         
         <div class="ion-text-end ion-margin-vertical">
-         <ion-button color="success" fill="outline" shape="round">
+         <ion-button id="btn-ajouter" color="success" fill="outline" shape="round">
           <ion-icon slot="start" name="add"></ion-icon>Ajouter</ion-button>
 
-         <ion-button color="danger" shape="round" fill="outline" >
+         <ion-button id="btn-effacer" color="danger" shape="round" fill="outline">
           <ion-icon name="close" slot="end"></ion-icon>Effacer</ion-button>
         </div>
        
 
        
-
-     
-    
      </ion-card-content>
    </ion-card>
+  </ion-col>
+  </ion-row>
 
+  <ion-row>
+    <ion-col size-md="6" offset-md="3">
+
+      <ion-list id="list-depenses">
+
+
+      </ion-list>
+
+    </ion-col>
+   </ion-row>
+
+   <ion-row>
+   <ion-col size-md="6" offset-md="3">
+     <p><strong>Total de depenses  : <span id="total-dep" ></span></strong></p>
+   </ion-col>
+   </ion-row>
+
+  </ion-grid>
    </ion-content>
   </ion-app>
 
 
+  <script src="depense.js">
+  </script>
  </body>
 </html>
